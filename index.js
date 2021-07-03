@@ -14,7 +14,7 @@ client.once('ready', () => {
 // @everyone via 'activate'
 client.on('message', message => {
     if (message.content === '!help') {
-        message.channel.send("```!activate & !deactvate\n!spdrn\n!B\n!fast\n!what\n!amogus\n!sesame\n!shesaid\n!rickroll\n!nyan\n!shootingstars\n!coffin\n!crazyfrog\n!curb\n!numa\n!fbi\n!hallelujah\n!dejavu\n!ppap\n!spiderman\n!pizza\n!lion```")
+        message.channel.send("```!activate & !deactivate\n!spdrn\n!B\n!fast\n!what\n!amogus\n!sesame\n!shesaid\n!rickroll\n!nyan\n!shootingstars\n!coffin\n!crazyfrog\n!curb\n!numa\n!fbi\n!hallelujah\n!dejavu\n!ppap\n!spiderman\n!pizza\n!lion```")
     }
     else if (message.content === '!activate') {
         const interval = setInterval(function() {
@@ -65,7 +65,7 @@ client.on('message', async message => {
         playAudio('shesaid.mp3', 1);
     }
     else if (message.content === '!nyan' && message.member.voice.channel) {
-        playAudio('nyan.mp3', 1);
+        playAudio('nyan.mp3', 0.6);
     }
     else if (message.content === '!shesaid' && message.member.voice.channel) {
         playAudio('shesaid.mp3', 1);
