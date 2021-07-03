@@ -14,7 +14,7 @@ client.once('ready', () => {
 // @everyone via 'activate'
 client.on('message', message => {
     if (message.content === '!help') {
-        message.channel.send("```!activate & !deactivate\n!spdrn\n!B\n!fast\n!what\n!amogus\n!sesame\n!shesaid\n!rickroll\n!nyan\n!shootingstars\n!coffin\n!crazyfrog\n!curb\n!numa\n!fbi\n!hallelujah\n!dejavu\n!ppap\n!spiderman\n!pizza\n!lion```")
+        message.channel.send("good bot v.3u1 https://github.com/phuwit/good-bot\n```!activate & !deactivate\n!spdrn\n!B\n!fast\n!what\n!amogus\n!sesame\n!shesaid\n!rickroll\n!nyan\n!shootingstars\n!coffin\n!crazyfrog\n!curb\n!numa\n!fbi\n!hallelujah\n!dejavu\n!ppap\n!spiderman\n!pizza\n!lion```")
     }
     else if (message.content === '!activate') {
         const interval = setInterval(function() {
