@@ -108,4 +108,4 @@ client.on('message', async message => {
     }
 });
 
-client.login('discordBotToken');
+client.login('bottoken');
