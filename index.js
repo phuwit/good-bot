@@ -1,9 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const dotenv = require('dotenv').config();
 
 let coach_messages = ["เราผ่านหนึ่งปียังครับ", "กลุ่มวันอังคารยังไม่ถึงเวลาเลยครับ", "ปฏิบัติตามระเบียบจบครับ", "กลุ่มวันอังคารยังไม่ถึงเวลาเลยครับ", "ทหารรับทราบและรับปฏิบัติ", "รอให้ถึงเวลาที่เราเรียนก่อนครับ", "วันอังคารเจอกันครับ", "ไม่อยากพิมพ์ทางออนไลน์เลยครับ", "ได้รับฟังพร้อมกันเข้าใจพร้อมกันขับเคลื่อนไปทั้งชั้นปี 2 ทุกกลุ่มวันไม่ถามตอบทีละบุคคล", "https://cdn.discordapp.com/attachments/877743617991651348/879033527595831296/unknown.png", "นศท.นายใดไม่พร้อมที่จะศึกษาให้แจ้งรายชื่อครับ", "มีการเรียนการสอนผ่านระบบออนไลน์และให้ปฏิบัติตามระบบ ระเบียบ และวินัย เท่านั้น", "เอาตามนี้นักเรียน ถ้าไม่พร้อมแจ้งรายชื่อมาครับ", "เจอกันผ่านระบบออนไลน์วันอังคารครับ", "คุยกันวันอังคารครับ"]
 
-client.login("ODU0MjkzMDE0NjY3MzI5NTM3.YMh0Xg.8UZfouWQHYOH1mE2ThvfA2Pvzs4");
+client.login(process.env.BOT_TOKEN);
 
 client.once('ready', () => {
     console.log('Ready!');
@@ -17,7 +18,7 @@ client.once('ready', () => {
 // @everyone via 'activate'
 client.on('message', message => {
     if (message.content === '!help') {
-        message.channel.send("good bot v.4 https://github.com/phuwit/good-bot\n```!activate & !deactivate\nครูครับ + *message*\n!spdrn\n!B\n!fast\n!what\n!amogus\n!sesame\n!shesaid\n!rickroll\n!nyan\n!shootingstars\n!coffin\n!crazyfrog\n!curb\n!numa\n!fbi\n!hallelujah\n!dejavu\n!ppap\n!spiderman\n!pizza\n!lion\n!cheng\n!kingdom```")
+        message.channel.send("good bot v4.0.1 https://github.com/phuwit/good-bot\n```!activate & !deactivate\nครูครับ + *message*\n!spdrn\n!B\n!fast\n!what\n!amogus\n!sesame\n!shesaid\n!rickroll\n!nyan\n!shootingstars\n!coffin\n!crazyfrog\n!curb\n!numa\n!fbi\n!hallelujah\n!dejavu\n!ppap\n!spiderman\n!pizza\n!lion\n!cheng\n!kingdom```")
     }
     else if (message.content === '!activate') {
         const interval = setInterval(function() {
