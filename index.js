@@ -9,11 +9,7 @@ client.login(process.env.BOT_TOKEN);
 
 client.once('ready', () => {
     console.log('Ready!');
-    client.user.setPresence({
-        activities:{
-            name: '!help'
-        }
-    })
+    client.user.setActivity("!help", { type: "STREAMING", url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"})
 });
 
 // @everyone via 'activate'
