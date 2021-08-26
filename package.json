@@ -10,7 +10,12 @@
   "license": "ISC",
   "dependencies": {
     "@discordjs/opus": "^0.6.0",
+<<<<<<< HEAD
     "discord.js": "^12.5.3",
+=======
+    "@discordjs/voice": "^0.6.0",
+    "discord.js": "^13.1.0",
+>>>>>>> 9c38aa85264cab11921120ddbb8eba0db2e02a4f
     "dotenv": "^10.0.0",
     "ffmpeg-static": "^4.3.0",
     "libsodium-wrappers": "^0.7.9"
