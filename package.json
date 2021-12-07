@@ -2,9 +2,20 @@
   "name": "good-bot",
   "packageManager": "yarn@3.1.1",
   "scripts": {
-    "start": "node ."
+    "start": "node .",
+    "voice-deps-debug": "node voice-deps-debug.js",
+    "lint": "eslint ."
   },
   "devDependencies": {
     "eslint": "^8.4.1"
+  },
+  "dependencies": {
+    "@discordjs/builders": "^0.9.0",
+    "@discordjs/opus": "^0.7.0",
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "@discordjs/voice": "^0.7.5",
+    "discord-api-types": "^0.25.2",
+    "discord.js": "^13.3.1",
+    "sodium": "^3.0.2"
   }
 }
