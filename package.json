@@ -1,0 +1,38 @@
+{
+  "name": "good-bot",
+  "version": "13.0.0",
+  "description": "it's the goodest bot ever created",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "voice-deps-debug": "node voice-deps-debug.js",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "eslint": "^8.4.1"
+  },
+  "dependencies": {
+    "@brunolepis/erlpack": "^1.0.4",
+    "@discordjs/builders": "^0.9.0",
+    "@discordjs/opus": "^0.7.0",
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "@discordjs/voice": "^0.7.5",
+    "bufferutil": "^4.0.5",
+    "discord-api-types": "^0.25.2",
+    "discord.js": "^13.3.1",
+    "sodium": "^3.0.2",
+    "utf-8-validate": "^5.0.7",
+    "zlib-sync": "^0.1.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phuwit/good-bot.git"
+  },
+  "author": "phuwit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phuwit/good-bot/issues"
+  },
+  "homepage": "https://github.com/phuwit/good-bot#readme"
+}
+
