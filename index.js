@@ -34,7 +34,7 @@ function setAudio(audioName) {
 	return entersState(player, AudioPlayerStatus.Playing, 5e3);
 }
 
-async function connectToChannel(channel) {
+async function playAudio(channel) {
 	let connection = joinVoiceChannel({
 		channelId: channel.id,
 		guildId: channel.guild.id,
@@ -50,6 +50,16 @@ async function connectToChannel(channel) {
 	}
 }
 
+async function autoDisconnect(connection) {
+	player.on(AudioPlayerStatus.Idle, () => {
+		setTimeout(() => { 
+			if(connection.state.status != 'destroyed' && AudioPlayerStatus.Idle){
+				connection.destroy();
+			} 
+		}, 300000)
+	})
+}
+
 client.on('ready', async () => {
 	console.log('Discord.js client is ready!');
 });
@@ -62,7 +72,7 @@ client.on('ready', async () => {
 
 // 		if (channel) {
 // 			try {
-// 				const connection = await connectToChannel(channel);
+// 				const connection = await playAudio(channel);
 // 				connection.subscribe(player);
 // 				await message.reply('Playing now!');
 // 			} catch (error) {
@@ -79,10 +89,12 @@ client.on('interactionCreate', async interaction => {
         let channel = interaction.member.voice.channel;
 
         setAudio(interaction.commandName);
-        let connection = await connectToChannel(channel);
+        let connection = await playAudio(channel);
         connection.subscribe(player);
-        
+
         await interaction.reply({ content: `Playing ${interaction.commandName}!`, ephemeral: true });
+
+		autoDisconnect(connection);
     }
     catch(error) {
         console.log(error);
