@@ -27,8 +27,8 @@ const player = createAudioPlayer();
 client.login(token);
 
 function setAudio(audioName) {
-	let resource = createAudioResource(`audio/${audioName}.mp3`, {
-		inputType: StreamType.Arbitrary,
+	let resource = createAudioResource(`audio/${audioName}.opus`, {
+		inputType: StreamType.Opus,
 	});
 	player.play(resource);
 	return entersState(player, AudioPlayerStatus.Playing, 5e3);
